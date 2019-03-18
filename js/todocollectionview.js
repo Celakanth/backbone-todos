@@ -6,7 +6,13 @@ const TodoCollection = Backbone.View.extend({
         if(!(options && options.model))
             throw new Error("No modal data");
         this.model.on("add", this.onAddTodoItem, this);
+        this.model.on("remove", this.onRemoveTodoItem, this);
         
+    },
+
+    onRemoveTodoItem: function (todoItem) {
+        console.log(todoItem);
+        this.$("li#" + todoItem.id).remove();
     },
 
     onAddTodoItem: function(todoItem){
@@ -16,7 +22,7 @@ const TodoCollection = Backbone.View.extend({
 
     events:{
         "click #add":"onClickAdd",
-        "keypress #newTodoItem" : "onKeyPress",
+        "keypress #newTodoItem": "onKeyPress"
         
     },
 
@@ -28,14 +34,16 @@ const TodoCollection = Backbone.View.extend({
 
     onClickAdd: function(){
         const $TodoInput = this.$("#newTodoItem");
-        if($TodoInput.val()){
-            const todoItem = new TodoItem({description: $TodoInput.val()});
+        if ($TodoInput.val()) {
+            $theId =  $TodoInput.val().replace(" ","") + this.model.length
+            const todoItem = new TodoItem({id: $theId.replace(" ", ""), description: $TodoInput.val(), isCompleted:false});
             
             this.model.add(todoItem);
 
             $TodoInput.val("");
         }
     },
+
 
     render: function(){
         const self = this;

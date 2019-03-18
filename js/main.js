@@ -1,9 +1,9 @@
 $(document).ready(function(){
     var todoItems = new TodoItems([
-        new TodoItem({ description : "This is a todo 1" }) , 
-        new TodoItem({ description: "This is a todo 2" }), 
-        new TodoItem({ description: "This is a todo 3" }),
-        new TodoItem({ description: "This is a todo 4" })
+        new TodoItem({ id:"item1", description : "This is a todo 1" }) , 
+        new TodoItem({ id:"item2", description: "This is a todo 2" }), 
+        new TodoItem({ id:"item3", description: "This is a todo 3" }),
+        new TodoItem({ id:"item4", description: "This is a todo 4" })
      ]);
 
     var todoItemsview = new TodoCollection({ model: todoItems });
