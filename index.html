@@ -1,32 +1,91 @@
 <!DOCTYPE html>
 <html class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/styles.css">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <script src="js/lib/modernizr-2.6.2.min.js"></script>
-    </head>
-    <body>
-        <script src="js/lib/jquery-min.js"></script>
-        <script src="js/lib/underscore-min.js"></script>
-        <script src="js/lib/backbone-min.js"></script>
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-        <!--My models-->
-        <script src="js/todoitem.js"></script>
-        <script src="js/todoitems.js"></script>
+    <script src="js/lib/modernizr-2.6.2.min.js"></script>
+</head>
 
-        <!--My views-->
-        <script src="js/todoitemview.js"></script>
-        <script src="js/todocollectionview.js"></script>
+<body>
+    <script src="js/lib/jquery-min.js"></script>
+    <script src="js/lib/underscore-min.js"></script>
+    <script src="js/lib/backbone-min.js"></script>
 
-        <!--Main controler-->
-        <script src="js/main.js"></script>
-    </body>
+    <!--My models-->
+    <script src="js/models/todoitem.js"></script>
+    <script src="js/collections/todoitems.js"></script>
+    <script src="js/models/user.js"></script>
+
+    <!--My views-->
+    <script src="js/views/todoitemview.js"></script>
+    <script src="js/views/todocollectionview.js"></script>
+    <script src="js/views/userview.js"></script>
+
+    <!--Templates -->
+    <script type="text/html" id="userTemplate">
+        <div class="row justify-content-center">
+            <div class="col-3">
+                <div class="wrap-login100">
+                    <form class="login100-form validate-form">
+                        <span class="login100-form-title p-b-26">
+                            Welcome
+                        </span>
+                        <span class="login100-form-title p-b-48">
+                            <i class="zmdi zmdi-font"></i>
+                        </span>
+                        <div class="wrap-input100 validate-input" data-validate="Valid email is: a@b.c">
+                            <input class="input100" type="text" autocomplete="off" name="email" id='email'>
+                            <span class="focus-input100" data-placeholder="Email"></span>
+                        </div>
+                        <div class="wrap-input100 validate-input" data-validate="Enter password">
+                            <span class="btn-show-pass">
+                                <i class="zmdi zmdi-eye"></i>
+                            </span>
+                            <input class="input100" type="password" name="pass" id='pass'>
+                            <span class="focus-input100" data-placeholder="Password"></span>
+                        </div>
+                        <div class="container-login100-form-btn">
+                            <div class="wrap-login100-form-btn">
+                                <div class="login100-form-bgbtn">
+
+                                </div>
+                                <button class="login100-form-btn" id='login'>
+                                    Login
+                                </button>
+                            </div>
+                        </div>
+                        <div class="text-center p-t-115">
+                            <span class="txt1">
+                                Don’t have an account?
+                            </span>
+                            <a class="txt2" href="#">
+                                Sign Up
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <!--Main controler-->
+    <script src="js/main.js"></script>
+
+    <div id='container'>
+
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
 </html>
