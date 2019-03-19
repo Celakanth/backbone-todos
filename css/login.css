@@ -78,7 +78,7 @@ li {
     list-style-type: none
 }
 
-input {
+form input {
     outline: none;
     border: none
 }
@@ -157,7 +157,7 @@ textarea:-ms-input-placeholder {
     color: #adadad
 }
 
-button {
+form button {
     outline: none!important;
     border: none;
     background: 0 0

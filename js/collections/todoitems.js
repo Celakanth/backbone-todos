@@ -1,3 +1,9 @@
-const TodoItems = Backbone.Collection.extend({
-    Model: TodoItem
+/*
+    Todo Items collection
+*/
+
+var TodoItems = Backbone.Collection.extend({
+	model: TodoItem,
+
+	url: "http://jsonplaceholder.typicode.com/todos"
 });

@@ -1,16 +1,20 @@
+/*
+    todo item model
+*/
 const TodoItem = Backbone.Model.extend({
     defaults: {
-        isCompleted: false
+        completed: false
     },
 
-    url: "fakeURL",
-    
+    urlRoot: "http://jsonplaceholder.typicode.com/todos",
+
     validate: function(attrs){
-        if(!attrs.description){
+        if(!attrs.tiile){
             return "No description added";
         }
     },
-    toggle: function () {
-        this.set("isCompleted", !this.get("isCompleted"));
+
+    toggle: function(){
+        this.set("completed", !this.get("completed"))
     }
 });

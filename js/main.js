@@ -1,15 +1,17 @@
+/*
+    Main starting file
+*/
 $(document).ready(function() {
-    var todoItems = new TodoItems([
-        new TodoItem({ id: "item1", description: "This is a todo 1" }),
-        new TodoItem({ id: "item2", description: "This is a todo 2" }),
-        new TodoItem({ id: "item3", description: "This is a todo 3" }),
-        new TodoItem({ id: "item4", description: "This is a todo 4" })
-    ]);
+     const todoItems = new TodoItems()//[
+    //     new TodoItem({title: "test"}),
+    //     new TodoItem({title: "Hello"})
+    // ]);
+    todoItems.fetch();
 
-    // var todoItemsview = new TodoCollection({ model: todoItems });
+    var todoItemsview = new TodoItemsView({ model: todoItems });
+    $("#container").append(todoItemsview.render().$el);
 
-    // $("body").append(todoItemsview.render().$el);
-
-    var userView = new UserView({ el: '#container' });
-    userView.render();
+   
+    // var userView = new UserView({ el: '#container' });
+    // userView.render();
 });

@@ -8,7 +8,7 @@ const UserView = Backbone.View.extend({
 
     onClickLogin: function(e) {
         e.preventDefault();
-
+        console.log(this.model);
     },
 
     render: function() {
