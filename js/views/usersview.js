@@ -1,4 +1,10 @@
 var UsersView = Backbone.View.extend({
+    
+    initialize: function(){
+        console.log(this);
+        
+    },
+
     events: {
         "click #login": "onClickLogin"
 
