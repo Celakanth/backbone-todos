@@ -2,16 +2,17 @@
     Main starting file
 */
 $(document).ready(function() {
-     const todoItems = new TodoItems()//[
+    //const todoItems = new TodoItems()//[
     //     new TodoItem({title: "test"}),
     //     new TodoItem({title: "Hello"})
     // ]);
-    todoItems.fetch();
+    //todoItems.fetch();
 
-    var todoItemsview = new TodoItemsView({ model: todoItems });
-    $("#container").append(todoItemsview.render().$el);
+    // var todoItemsview = new TodoItemsView({ model: todoItems });
+    // $("#container").append(todoItemsview.render().$el);
 
-   
-    // var userView = new UserView({ el: '#container' });
-    // userView.render();
+    var userModel = new Users({});
+    var userView = new UsersView({ model: userModel });
+    $('#container').append(userView.render().$el);
+
 });
