@@ -1,9 +1,8 @@
 const User = Backbone.Model.extend({
-    urlRoot: "http://127.0.0.1:3000/users/login",
+    urlRoot: "http://localhost:3000/users/login",
 
     initialize: function(){
-        this.model = new User({});
-        this.model.on("change", this.onUpdated, this);
+        
     },
 
     onUpdated: function(){

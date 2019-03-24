@@ -12,6 +12,7 @@ $(document).ready(function() {
     // $("#container").append(todoItemsview.render().$el);
 
     var userModel = new Users({});
+    console.log(this.model);
     var userView = new UserView({ el: "#container" });
     userView.render();
 

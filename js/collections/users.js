@@ -1,6 +1,6 @@
 var Users = Backbone.Collection.extend({
     model: User,
-    url: "https://sheltered-dusk-97652.herokuapp.com/user",
+    url: "localhost:3000/users/login",
 
     events: {
         "click #login": "onClickLogin"
